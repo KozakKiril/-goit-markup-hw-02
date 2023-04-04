@@ -10,29 +10,30 @@
  
 
 /* fonts */
-    --font-family-text: 'Roboto';}
+    --font-family-text: 'Roboto', sans-serif;}
 
 /* body */
 body {
     font-family: var(--font-family-text);
-    font-style: normal;
+    letter-spacing: 0.03em;
     background-color: var(--background-primery-color);}
-ul {list-style-type: none;}
-a {text-decoration: none;}
+
+.list {list-style-type: none;}
+.link {text-decoration: none;}
 
 /* header */
 .header {background-color: var(--main-white-color);}
 
 /* .logo */
-.header .logo,
-.footer .logo { 
+.logo { 
     color: #000000;
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
-    line-height: 31px;
+    line-height: 1,19;
     /* identical to box height */
     letter-spacing: 0.03em;
+
     text-decoration: none;}
 .logo span {color: var(--hover-color);}
 
@@ -41,22 +42,24 @@ a {text-decoration: none;}
     color: var(--text-primary-color);
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1,14;
     letter-spacing: 0.02em;}
 
 .nav-links .link:visited {color: var(--text-primary-color);}
-.nav-links .link:hover {color: var(--hover-color);}
+.nav-links .link:hover,
+.nav-links .link:focus {color: var(--hover-color);}
 
 /* contacts */
 .contacts .link {
     color: var(--text-secondary-color);
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1,14;
     letter-spacing: 0.02em;}
 
 .contacts .link:visited {color: var(--text-secondary-color);}
-.contacts .link:hover {color: var(--hover-color);}
+.contacts .link:hover,
+.contacts .link:focus {color: var(--hover-color);}
 
 /* hero */
 .hero {background-color: var(--background-dark-color);}
@@ -64,39 +67,41 @@ a {text-decoration: none;}
     color: var(--main-white-color);
     font-weight: 900;
     font-size: 44px;
-    line-height: 60px;
+    line-height: 1,36;
     /* or 136% */
     text-align: center;
     letter-spacing: 0.06em;
-    text-transform: uppercase;;}
-.hero .button {
-    background-color:var(--hover-color);
-    color: var(--main-white-color);}
+    text-transform: uppercase;}
+.button {
+    background-color: var(--hover-color);
+    color: var(--main-white-color);
+    font-family: inherit;
+    text-align: center;
+    cursor:pointer;
+}
+    
 
 /* features */
 .features .title {
     color: var(--text-primary-color);
     font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.03em;
-    line-height: 16px;
+    line-height: 1,14;
     text-transform: uppercase;}
 .features .descr {
     color: var(--text-secondary-color);
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
-    /* or 171% */
-    letter-spacing: 0.03em;}
+    line-height: 1,71;
+    /* or 171% */}
 
 /* work */
 .work {
     color: var(--text-primary-color);
     font-weight: 700;
     font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    letter-spacing: 0.03em;;}
+    line-height: 1,17;
+    text-align: center;}
 
 /* team */
 .team {background-color: var(--background-secondary-color);}
@@ -104,26 +109,25 @@ a {text-decoration: none;}
     color: var(--text-primary-color);
     font-weight: 700;
     font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    letter-spacing: 0.03em;}
-.team .profile {background-color: var(--main-white-color);}
+    line-height: 1,17;
+    text-align: center;}
+
+.profile {background-color: var(--main-white-color);}
+
 .team .name {
     color: var(--text-primary-color);
     font-weight: 500;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1,19;
     /* identical to box height */
-    text-align: center;
-    letter-spacing: 0.03em;}
+    text-align: center;}
 .team .position {
     color: var(--text-secondary-color);
     font-weight: 400;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1,19;
     /* identical to box height */
-    text-align: center;
-    letter-spacing: 0.03em;}
+    text-align: center;}
 
 /* footer */
 .footer {
@@ -134,9 +138,36 @@ a {text-decoration: none;}
     /* or 171% */
     letter-spacing: 0.03em;}
 .address {font-style: normal;}    
-.address .location {
+.address .link {color: #ffffff99;}
+.address .location,
+.address .location:visited {color: var(--main-white-color);}
+
+
+/* portfolio */
+.filter {
+    background-color: var(--background-secondary-color);
+    color: var(--text-primary-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1,62;
+    /* identical to box height, or 162% */
+    text-align: center;}
+.filter:hover,
+.filter:focus {
+    background-color: var(--hover-color);
     color: var(--main-white-color);}
-.address .location:visited {
-    color: var(--main-white-color);}
-.address .link {
-    color:#ffffff99;}
+
+.profile .title {
+    color: var(--text-primary-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    /* identical to box height, or 200% */
+    letter-spacing: 0.06em;}
+
+.profile-descr {
+    color: var(--text-secondary-color);
+    font-size: 16px;
+    line-height: 1,88;
+    /* identical to box height, or 188% */;
+}
